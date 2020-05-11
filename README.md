@@ -36,7 +36,7 @@ The following equipment is tested and recommended:
 | [apu2e4](https://www.varia-store.com/en/produkt/36842-pc-engines-apu2e4-bundle-board-psu-memory-enclosure.html) | apu2e4 system bundle | $203.27
 | [GS116Ev2](https://www.netgear.com/support/product/GS116Ev2.aspx) | Smart Managed Plus Switch | ~$100
 | Assorted CAT cables | At least 5 short CAT cables | $10
-| [Main workstation you wish to place in LAN](https://ebay.com) | Ex. Lenovo x230 | ~$100
+| Main workstation you wish to place in LAN | Ex. Lenovo x230 | ~$100
 | Devices you wish to place in VLANs | Devices of your choice | Variable
 
 ## Update apu2 Firmware
