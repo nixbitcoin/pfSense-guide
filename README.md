@@ -817,6 +817,43 @@ You don't need to pass anything in unless you want to port forward, which is pos
 
 Maybe I'll write a guide on this in the future. Message me if I haven't and you need help.
 
+## Randomize VPN IP
+
+You can also set up a VPN that automatically restarts, giving you a random new IP address everytime. This example uses Mullvad:
+
+Replace `Server host or address` in VPN client config with
+
+```
+random.mullvad.net
+```
+
+Calling this domain name returns a random Mullvad server IP every time. Test it on your workstation with
+
+```console
+$ sudo apt-get install dnsutils
+$ nslookup random.mullvad.net
+```
+
+Go to `System` > `Package Manager` > `Available Packages`
+
+Click `Install` next to `Cron`
+
+Go to `Services` > `Cron` > `Add`
+
+To restart VPN daily at 5AM with new IP address:
+
+```
+Minute: 0
+Hour: 5
+Day of the Month: *
+Month of the Year: *
+Day of the Week: *
+User: root
+Command: /usr/local/sbin/pfSsh.php playback svc restart openvpn client x (replace x with ovpnc number from Interface Assignments)
+```
+
+Click `Save`
+
 ## Testing
 
 Go to [am.i.mullvad.net](https://am.i.mullvad.net) from LAN and wait for results
